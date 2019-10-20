@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/TDT4250_asssignment1_2/src-gen" creationIcons="false"
+    editDirectory="/TDT4250_asssignment1_2.edit/src-gen" editorDirectory="/TDT4250_asssignment1_2.editor/src-gen"
+    modelPluginID="TDT4250_asssignment1_2" modelName="TDT4250_asssignment1_2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>tDT4250_asssignment1_2.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="TDT4250_asssignment1_2" disposableProviderFactory="true" ecorePackage="tDT4250_asssignment1_2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="tDT4250_asssignment1_2.ecore#//Fall_or_spring">
+      <genEnumLiterals ecoreEnumLiteral="tDT4250_asssignment1_2.ecore#//Fall_or_spring/Fall"/>
+      <genEnumLiterals ecoreEnumLiteral="tDT4250_asssignment1_2.ecore#//Fall_or_spring/Spring"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="tDT4250_asssignment1_2.ecore#//Calendar"/>
+    <genDataTypes ecoreDataType="tDT4250_asssignment1_2.ecore#//course_code"/>
+    <genDataTypes ecoreDataType="tDT4250_asssignment1_2.ecore#//Semester_credits"/>
+    <genDataTypes ecoreDataType="tDT4250_asssignment1_2.ecore#//Program_credits"/>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Program">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Program/Name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Program/specialization"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Program/program_course"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Program/Credits"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Program/semester"/>
+    </genClasses>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Specialization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Specialization/Name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Specialization/semester"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Specialization/specialization"/>
+    </genClasses>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Semester">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Semester/Number"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Semester/semester_course"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Semester/Credits"/>
+    </genClasses>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Semester_Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Semester_Course/Mandatory"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Semester_Course/course"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Semester_Course/Fall_or_spring"/>
+    </genClasses>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Course/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Course/Code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Course/Credits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Course/StartDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Course/ExamDate"/>
+    </genClasses>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Program_course">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Program_course/course"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Program_course/Fall_or_spring"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Program_course/Mandatory"/>
+    </genClasses>
+    <genClasses ecoreClass="tDT4250_asssignment1_2.ecore#//Department">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tDT4250_asssignment1_2.ecore#//Department/Name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Department/course"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference tDT4250_asssignment1_2.ecore#//Department/program"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

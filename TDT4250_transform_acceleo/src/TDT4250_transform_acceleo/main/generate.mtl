@@ -1,0 +1,69 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/tDT4250_asssignment1_2', 'http://www.eclipse.org/emf/2002/Ecore')]
+
+
+
+[template public generate(department : Department)]
+	[comment @main /]
+	[file (department.Name + ('.html'), false, 'UTF-8')]
+<html>
+<head>
+	<title>[department.Name/]</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+		[for (program : Program | department.program)]
+			[generate(program)/]
+		[/for]
+
+</body>
+
+</html>
+
+	[/file]
+
+[/template]
+
+[template public generate(program : Program)]
+<hr/><h2>Program: [program.Name/]</h2>
+[for (specialization : Specialization | program.specialization)]
+	[generate(specialization)/]
+[/for]
+[/template]
+
+
+[template public generate(specialization : Specialization)]
+<hr/><h3>Specialization: [specialization.Name/]</h3>
+[for (semester : Semester | specialization.semester)]
+	[generate(semester)/]
+[/for]
+[/template]
+
+[template public generate(semester : Semester)]
+<hr/><h4>Semester:[semester.Number/] Credits: [semester.Credits/]</h4>
+[for (semester_course : Semester_Course | semester.semester_course)]
+	[generate(semester_course)/]
+[/for]
+[/template]
+
+[template public generate(semester_course : Semester_Course)]
+<hr/>([semester_course.Fall_or_spring/])<br/>
+	<script type="text/javascript">
+		var man = [semester_course.Mandatory/];
+		if(man)
+		document.write("Mandatory<br />");
+		else
+		document.write("Elective<br />");
+	</script>
+[for (course : Course | semester_course.course)]
+	[generate(course)/]
+[/for]
+[/template]
+
+[template public generate(course : Course)]
+
+	[course.Code/] [course.Name/] <br/>
+	Credits: [course.Credits/]
+	
+
+[/template]

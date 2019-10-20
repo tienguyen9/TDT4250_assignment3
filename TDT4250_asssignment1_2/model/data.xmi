@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tDT4250_asssignment1_2:Department xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tDT4250_asssignment1_2="http://www.example.org/tDT4250_asssignment1_2" Name="IDI">
+  <program Name="Datateknologi 2 Ã¥r" Credits="120">
+    <specialization Name="Programvareutvikling">
+      <semester Number="7" Credits="30">
+        <semester_course Mandatory="true">
+          <course Name="Intro AI" Code="TDT4136"/>
+        </semester_course>
+        <semester_course>
+          <course Name="Avansert programvareutvikling" Code="TDT4250"/>
+        </semester_course>
+      </semester>
+      <semester Number="8" Credits="30">
+        <semester_course Fall_or_spring="Spring">
+          <course Name="Anbefalingssystemer" Code="TDT4215"/>
+        </semester_course>
+        <semester_course Mandatory="true" Fall_or_spring="Spring">
+          <course Name="Programvarearkitektur" Code="TDT4240"/>
+        </semester_course>
+      </semester>
+      <semester Number="9" Credits="30">
+        <semester_course>
+          <course Name="Corporate Responsibility and Ethics" Code="FI5205"/>
+        </semester_course>
+        <semester_course Mandatory="true">
+          <course Name="Datateknologi, fordypningsprosjekt" Code="TDT4501" Credits="15.0"/>
+          <course Name="&#x9;Datateknologi, fordypningsemne" Code="TDT4506" Credits="15.0"/>
+        </semester_course>
+      </semester>
+      <semester Number="10" Credits="30">
+        <semester_course Fall_or_spring="Spring"/>
+        <semester_course Mandatory="true" Fall_or_spring="Spring">
+          <course Name="Datateknologi, masteroppgave" Code="TDT4900" Credits="30.0"/>
+        </semester_course>
+      </semester>
+    </specialization>
+    <specialization Name="AI"/>
+  </program>
+</tDT4250_asssignment1_2:Department>
